@@ -112,5 +112,112 @@ public class Main {
 
         System.out.println(passportMap.get(5566778899L));
 
+        System.out.println("\n Д/З коллекции №3");
+        System.out.println("ДЗ-1");
+        System.out.println("Задание 1");
+
+        PhoneBook phonebook1 = new PhoneBook("+12345678900", "Королев");
+        PhoneBook phonebook2 = new PhoneBook("+00987654321", "Дмитриев");
+        PhoneBook phonebook3 = new PhoneBook("+673579487", "Кузнецов");
+        PhoneBook phonebook4 = new PhoneBook("+65161565", "Мельников");
+        PhoneBook phonebook5 = new PhoneBook("+6516156165", "Беликов");
+        PhoneBook phonebook6 = new PhoneBook("+6516156165", "Зайцев");
+        PhoneBook phonebook7 = new PhoneBook("+343454678", "Волков");
+        PhoneBook phonebook8 = new PhoneBook("1343654787", "Медведев");
+        PhoneBook phonebook9 = new PhoneBook("3243566", "Архипов");
+        PhoneBook phonebook10 = new PhoneBook("565768797866", "Сокол");
+
+        HashMap<String, String> hashMap = new HashMap<>();
+        hashMap.put(phonebook1.getName(), phonebook1.getNumber());
+        hashMap.put(phonebook2.getName(), phonebook2.getNumber());
+        hashMap.put(phonebook3.getName(), phonebook3.getNumber());
+        hashMap.put(phonebook4.getName(), phonebook4.getNumber());
+        hashMap.put(phonebook5.getName(), phonebook5.getNumber());
+        hashMap.put(phonebook6.getName(), phonebook6.getNumber());
+        hashMap.put(phonebook7.getName(), phonebook7.getNumber());
+        hashMap.put(phonebook8.getName(), phonebook8.getNumber());
+        hashMap.put(phonebook9.getName(), phonebook9.getNumber());
+        hashMap.put(phonebook10.getName(), phonebook10.getNumber());
+
+        System.out.println(hashMap);
+
+        System.out.println("\n-----------------------------------");
+        System.out.println("ДЗ-1");
+        System.out.println("Задание 2");
+
+        salad.addProductInRecipe(tomatoes, 1);
+        salad.addProductInRecipe(cucumbers, 1);
+        friedEgg.addProductInRecipe(eggs, 3);
+        friedEgg.addProductInRecipe(beckon, 1);
+
+        System.out.println("\n-----------------------------------");
+        System.out.println("ДЗ-1");
+        System.out.println("Задание 3");
+
+        Task3 task3 = new Task3();
+        task3.addInTask3("12", 12);
+        System.out.println(task3.taskMap);
+        task3.addInTask3("12", 13);
+        System.out.println(task3.taskMap);
+
+        System.out.println("\n-----------------------------------");
+        System.out.println("ДЗ-2");
+        System.out.println("Задание 1");
+
+        Map<String, List<Integer>> hW3Task1 = new HashMap<>();
+        List<Integer> integerList = new ArrayList<>(List.of(
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1));
+        List<Integer> integerList2 = new ArrayList<>(List.of(
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1));
+        List<Integer> integerList3 = new ArrayList<>(List.of(
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1));
+        List<Integer> integerList4 = new ArrayList<>(List.of(
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1));
+        List<Integer> integerList5 = new ArrayList<>(List.of(
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1,
+                (int) (Math.random() * 1000) + 1));
+        hW3Task1.put("One", integerList);
+        hW3Task1.put("Two", integerList2);
+        hW3Task1.put("Three", integerList3);
+        hW3Task1.put("Four", integerList4);
+        hW3Task1.put("Five", integerList5);
+        System.out.println(hW3Task1);
+
+        Map<String, Integer> targetHW3Task1 = new HashMap<>();
+        for (Map.Entry<String, List<Integer>> target : hW3Task1.entrySet()) {
+            targetHW3Task1.put(target.getKey(), calcSumOfList(target.getValue()));
+        }
+        System.out.println(targetHW3Task1);
+
+        System.out.println("\n-----------------------------------");
+        System.out.println("ДЗ-2");
+        System.out.println("Задание 2");
+
+        Map<Integer, String> linkedHashMap = new LinkedHashMap<>();
+
+        for (int i = 0; i < 10; i++) {
+            String s = "String" + i;
+            linkedHashMap.put(i, s);
+        }
+        System.out.println(linkedHashMap);
+
+
+    }
+
+    public static int calcSumOfList(List<Integer> list) {
+        int sum = 0;
+        for (Integer integer : list) {
+            sum += integer;
+        }
+        return sum;
     }
 }
